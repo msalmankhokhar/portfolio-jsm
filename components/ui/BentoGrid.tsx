@@ -1,8 +1,9 @@
+"use client"
 import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 
 // Also install this npm i --save-dev @types/react-lottie
-import Lottie from "react-lottie";
+// import Lottie from "react-lottie";
 
 import { cn } from "@/lib/utils";
 
@@ -12,6 +13,7 @@ import GridGlobe from "./GridGlobe";
 import animationData from "@/data/confetti.json";
 import MagicButton from "../MagicButton";
 import { me } from "@/data";
+import Image from "next/image";
 
 export const BentoGrid = ({
   className,
@@ -53,8 +55,8 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
-  const leftLists = ["ReactJS", "Express", "Typescript"];
-  const rightLists = ["VueJS", "NuxtJS", "GraphQL"];
+  const leftLists = ["ReactJS", "NextJS", "Typescript"];
+  const rightLists = ["Python", "React Native", "NodeJS"];
 
   const [copied, setCopied] = useState(false);
 
@@ -179,8 +181,10 @@ export const BentoGridItem = ({
                 className={`absolute -bottom-5 right-0 ${copied ? "block" : "block"
                   }`}
               >
-                {/* <img src="/confetti.gif" alt="confetti" /> */}
-                <Lottie options={defaultOptions} height={200} width={400} />
+                {
+                  copied && <Image width={150} height={150} src="/confetti.gif" alt="confetti" />
+                }
+                {/* <Lottie options={defaultOptions} height={200} width={400} /> */}
               </div>
 
               <MagicButton
