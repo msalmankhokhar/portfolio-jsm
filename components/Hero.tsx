@@ -71,7 +71,7 @@ const Hero = () => {
           />
 
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi! I&apos;m {me.name}, a Software Developer based in {me.basedIn}.
+            Hi! I&apos;m {me.firstName}, a Software Developer based in {me.basedIn}.
           </p>
 
           <a href="#about">
