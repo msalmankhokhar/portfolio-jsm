@@ -1,3 +1,11 @@
+export const me = {
+  name: 'Salman Khokhar',
+  firstName: 'Salman',
+  lastName: 'Khokhar',
+  email: 'msalmankhokhar13@gmail.com',
+  basedIn: 'Pakistan'
+}
+
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },

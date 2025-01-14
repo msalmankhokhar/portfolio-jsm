@@ -1,8 +1,10 @@
 import { FaLocationArrow } from "react-icons/fa6";
+import Image from "next/image";
 
 import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
+import { me } from "@/data";
 
 const Hero = () => {
   return (
@@ -42,6 +44,18 @@ const Hero = () => {
 
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
+          {/* <div className="rounded-full w-[120px] h-[120px] relative mb-8 p-[2px] overflow-hidden">
+            <Image
+              // src="/avatars/avatar.avif"
+              src="/avatars/avatar.avif"
+              alt="Profile Avatar"
+              width={119}
+              height={119}
+              className="rounded-full"
+              priority
+            />
+          </div> */}
+
           <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
             Dynamic Web Magic with Next.js
           </p>
@@ -57,7 +71,7 @@ const Hero = () => {
           />
 
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi! I&apos;m Adrian, a Next.js Developer based in Croatia.
+            Hi! I&apos;m {me.name}, a Software Developer based in {me.basedIn}.
           </p>
 
           <a href="#about">
